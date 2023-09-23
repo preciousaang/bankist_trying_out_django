@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+    .form-group {
+        @apply block my-2 hover:shadow-sm;
+    }
+    .btn-primary{
+        @apply border-2 p-2 border-blue-300 bg-blue-300 text-white;
+    }
+}

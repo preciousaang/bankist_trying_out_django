@@ -12,7 +12,7 @@
       <form action='{% url 'blug:process-post' %}' novalidate method="post">
         {% csrf_token %}
 
-        <div class="block my-2">
+        <div class="form-group">
         
           <label for="{{post_form.id_for_title}}" class="block">Post Title: </label>
           {{post_form.title}}
@@ -22,7 +22,7 @@
           </div>
           {% endif %}
         </div>
-        <div class="block my-2">
+        <div class="form-group">
           <label for="{{post_form.id_for_body}}" class="block">Post Body: </label>
           {{post_form.body}}
           {% if post_form.body.errors %}
@@ -33,7 +33,7 @@
         </div>
 
      
-            <button class="border-2 p-2 border-blue-300 bg-blue-300 text-white"  type="submit">create post</button>
+            <button class="btn-primary"  type="submit">create post</button>
       </form>
     
     </div>
