@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title> </title>
+  </head>
+  <body>
+    <h2>Edit post</h2>
+    {% if messages %} {% for message in messages %} {{ message }} {% endfor %}
+    {% endif %}
+    <form action="" novalidate method="post">
+      {% csrf_token %} {{form.as_ul}}
+      <button type="submit">edit post</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+
+{% extends "blug/layouts/post-base.html" %}
+{% block title %}Create Post{%endblock%}
+{% block content %}
+    <div class="p-10 bg-slate-400">
+      <h2 class="text-yellow-900 font-bold uppercase text-2xl">Create post</h2>
+      {% if post_form.non_field_errors %}
+        <div  class="bg-red-200 text-red-500">
+            {{post_form.non_field_errors}}
+        </div>
+      {% endif %}
+      <form action='{% url 'blug:process-post' %}' novalidate method="post">
+        {% csrf_token %}
+
+        <div class="block my-2">
+        
+          <label for="{{post_form.id_for_title}}" class="block">Post Title: </label>
+          {{post_form.title}}
+          {% if post_form.title.errors %}
+          <div class="text-red-900">
+          {{post_form.title.errors}}
+          </div>
+          {% endif %}
+        </div>
+        <div class="block my-2">
+          <label for="{{post_form.id_for_body}}" class="block">Post Body: </label>
+          {{post_form.body}}
+          {% if post_form.body.errors %}
+          <div class="text-red-900">
+          {{post_form.body.errors}}
+          </div>
+          {% endif %}
+        </div>
+
+     
+            <button class="border-2 p-2 border-blue-300 bg-blue-300 text-white"  type="submit">create post</button>
+      </form>
+    
+    </div>
+{% endblock %}

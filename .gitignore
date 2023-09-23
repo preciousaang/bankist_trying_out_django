@@ -1,0 +1,90 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore database files
+db.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore development settings file
+settings/local.py
+
+# Ignore sensitive or secret files (e.g., .env)
+.env
+
+# Ignore media and static files (usually served by web server)
+media/
+staticfiles/
+
+# Ignore user-uploaded media files (if using a separate storage backend)
+media_root/
+
+# Ignore backup files (e.g., *.bak, *.swp)
+*~
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore database backups (adjust as needed)
+*.dump
+*.sql
+
+
+# Ignore node_modules directory (where npm packages are stored)
+node_modules/
+
+# Ignore npm's package-lock files
+package-lock.json
+yarn.lock
+
+# Ignore .env files (environment variable configuration)
+.env
+
+# Ignore log files and debugging files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore local development files and directories
+/dist/
+/build/
+/tmp/
+/cache/
+/public/
+
+# Ignore any build output or compiled code (adjust as needed)
+*.js
+*.map
+*.ts
+*.tsx
+
+# Ignore any development artifacts (adjust as needed)
+*.log
+*.swp
+*.swo
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Visual Studio Code settings (adjust as needed)
+.vscode/
+
+# Ignore JetBrains IDE settings (adjust as needed)
+.idea/
+
+# Ignore editorconfig files (adjust as needed)
+.editorconfig
+
+# Ignore TypeScript definition files (adjust as needed)
+*.d.ts
+
+# Ignore package lockfiles and yarn state files (adjust as needed)
+pnpm-lock.yaml
+shrinkwrap.yaml
+yarn-error.log
