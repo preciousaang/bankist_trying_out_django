@@ -8,6 +8,9 @@
         @apply block my-2 hover:shadow-sm;
     }
     .btn-primary{
-        @apply border-2 p-2 border-blue-300 bg-blue-300 text-white;
+        @apply border-2 p-2 border-blue-400 bg-blue-400 text-white;
+    }
+    input[type='text'].is-invalid, textarea.is-invalid{
+        @apply border-2 border-red-400 shadow-sm;
     }
 }

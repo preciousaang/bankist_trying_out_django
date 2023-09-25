@@ -31,6 +31,9 @@ def edit_post(request, post_id):
             form.save()
             messages.add_message(request, messages.SUCCESS, "Post updated")
             return redirect("blug:edit-post", post_id)
+        else:
+            for field in form.errors:
+                form[field].field.widget.attrs["class"] += " is-invalid"
 
     else:
         form = PostForm(instance=post)

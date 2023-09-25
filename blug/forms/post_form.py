@@ -8,7 +8,13 @@ class PostForm(ModelForm):
         fields = ["title", "body"]
         widgets = {
             "title": TextInput(
-                attrs={"class": "w-1/4 h-8 text-2xl text-gray-600  ring-0"}
+                attrs={
+                    "class": "w-1/4 shadow-lg resize-none h-8 text-lg p-2 text-gray-600"
+                },
             ),
-            "body": Textarea(attrs={"class": "w-1/4 text-gray-600 text-2xl "}),
+            "body": Textarea(
+                attrs={
+                    "class": "w-1/4 shadow-lg resize-none text-gray-600 text-lg p-2 "
+                }
+            ),
         }
