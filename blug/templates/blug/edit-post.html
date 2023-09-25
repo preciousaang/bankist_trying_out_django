@@ -3,7 +3,7 @@
 <h2 class="text-yellow-900 font-bold uppercase text-2xl">Edit post</h2>
 {% if messages %} {% for message in messages %} {{ message }} {% endfor %}
 {%endif %}
-<form action="" novalidate method="post">
+<form novalidate method="post">
   {% csrf_token %} {{form.as_ul}}
   <button class="btn-primary" type="submit">Edit Post</button>
 </form>
