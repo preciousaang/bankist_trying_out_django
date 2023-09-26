@@ -37,7 +37,7 @@ def edit_post(request, post_id):
 
     else:
         form = PostForm(instance=post)
-    return render(request, "blug/edit-post.html", {"form": form})
+    return render(request, "blug/edit-post.html", {"post_form": form, "post": post})
 
 
 def list_post(request):
