@@ -8,7 +8,7 @@
   <div class="form-group">
     <label for="{{post_form.id_for_title}}" class="block">Post Title </label>
     {{post_form.title}} {% if post_form.title.errors %}
-    <div class="text-red-900 border-2 border-red-400 w-1/4 mt-1 rounded-sm p-2">
+    <div class="text-red-900  p-2">
       {{post_form.title.errors}}
     </div>
     {% endif %}
@@ -16,7 +16,7 @@
   <div class="form-group">
     <label for="{{post_form.id_for_body}}" class="block">Post Body </label>
     {{post_form.body}} {% if post_form.body.errors %}
-    <div class="text-red-900 border-2 border-red-400 w-1/4 mt-1 rounded-sm p-2">
+    <div class="text-red-900  p-2">
       {{post_form.body.errors}}
     </div>
     {% endif %}
